@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Feel free to use this file in any way, shape, or form.
+  -->
+
+<resources>
+    <dimen name="card_overlay_elevation_0dp">0dp</dimen>
+    <dimen name="card_elevation_1dp">1dp</dimen>
+</resources>

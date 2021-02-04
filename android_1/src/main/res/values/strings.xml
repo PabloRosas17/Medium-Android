@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Feel free to use this file in any way, shape, or form.
+  -->
+
+<resources>
+    <string name="dark_mode">Mode: Dark</string>
+    <string name="light_mode">Mode: Light</string>
+</resources>

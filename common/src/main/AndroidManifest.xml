@@ -1,0 +1,6 @@
+<!--
+  ~ Feel free to use this file in any way, shape, or form.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="coffee.flavors.common" />

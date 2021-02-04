@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Feel free to use this file in any way, shape, or form.
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data></data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_dots_root"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="08dp"
+        android:layout_marginLeft="08dp"
+        android:layout_marginRight="08dp"
+        android:background="@drawable/dot_default">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

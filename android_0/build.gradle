@@ -1,0 +1,59 @@
+/*
+ * Feel free to use this file in any way, shape, or form.
+ */
+
+apply plugin: 'com.android.dynamic-feature'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    /* compileSdkVersion what version of android to compile the app with */
+    /* buildToolsVersion component of android sdk required to build the app */
+    compileSdkVersion rootProject.compile_sdk_ver
+    buildToolsVersion rootProject.build_tools_ver
+    compileOptions {
+        /* java compiler options
+        * incremental whether Java compilation should be incremental or not.
+        * sourceCompatibility language level of the java source code.
+        * targetCompatibility version of the generated Java bytecode.*/
+        /* incremental true */
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        /* additional compilation options
+         * jvmTarget Target version of the generated JVM bytecode */
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    defaultConfig {
+        /* minSdk min sdk for the app
+         * targetSdkVersion sdk the app designed to run on
+         * maxSdkVersion max sdk for the app */
+        minSdkVersion rootProject.min_sdk_ver
+        targetSdkVersion rootProject.target_sdk_ver
+        maxSdkVersion  rootProject.max_sdk_ver
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    androidExtensions {
+        /* experimental features for kotlin */
+        experimental = true
+    }
+    /* Data binding helps you write declarative layouts
+     * and minimize the glue code necessary to bind your application logic and layouts. */
+    dataBinding {
+        /* bind the application data to the layouts in a concise way */
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation project(path: ':common')
+    implementation project(':android_zzz')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    kapt 'androidx.lifecycle:lifecycle-compiler:' + rootProject.lifecycle_ver
+    kapt 'com.android.databinding:compiler:' + rootProject.data_binding_ver
+}

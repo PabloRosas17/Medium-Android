@@ -1,0 +1,74 @@
+
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    defaultConfig {
+        applicationId "coffee.flavors.android_zzz"
+        compileSdkVersion rootProject.compile_sdk_ver
+        minSdkVersion rootProject.min_sdk_ver
+        targetSdkVersion rootProject.target_sdk_ver
+        maxSdkVersion  rootProject.max_sdk_ver
+        versionCode 8
+        versionName "8"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            crunchPngs false
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding  {
+        enabled = true
+    }
+    packagingOptions {
+        pickFirst "META-INF/DEPENDENCIES"
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            all {
+                minHeapSize = "128m"
+                maxHeapSize = "1024m"
+            }
+        }
+    }
+    dynamicFeatures = [":android_0", ":android_1"]
+}
+dependencies {
+    implementation project(path: ':common')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api 'androidx.annotation:annotation:' + rootProject.annotation_ver
+    api 'androidx.core:core-ktx:' + rootProject.core_ktx_ver
+    api 'androidx.appcompat:appcompat:' + rootProject.app_compat_ver
+    api 'androidx.fragment:fragment-ktx:' + rootProject.fragment_ver
+    api 'com.google.android.play:core:' + rootProject.google_play_core_ver
+    api 'androidx.viewpager2:viewpager2:' + rootProject.view_pager_ver
+    api 'com.google.android.material:material:' + rootProject.material_design_ver
+    api 'androidx.constraintlayout:constraintlayout:' + rootProject.constratint_layout_ver
+    api 'androidx.lifecycle:lifecycle-extensions:' + rootProject.lifecycle_ver
+    api 'androidx.lifecycle:lifecycle-runtime-ktx:' + rootProject.lifecycle_ver
+    api 'androidx.lifecycle:lifecycle-common-java8:' + rootProject.lifecycle_ver
+    api 'androidx.lifecycle:lifecycle-livedata-ktx:' + rootProject.lifecycle_ver
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:' + rootProject.lifecycle_ver
+    api 'androidx.lifecycle:lifecycle-viewmodel-savedstate:' + rootProject.lifecycle_ver
+    api 'androidx.lifecycle:lifecycle-compiler:' + rootProject.lifecycle_ver
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}

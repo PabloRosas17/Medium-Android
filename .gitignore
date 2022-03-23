@@ -1,0 +1,61 @@
+# # # # # # # # # # # #
+# GitIgnore Android #
+# # # # # # # # # #
+#
+# Android Studio
+.navigation/
+captures/
+# Application Specific 
+app/release/output.json
+credentials.json
+local.properties
+# Built
+*.apk
+*.aar
+*.ap_
+*.aab# Files for the ART/Dalvik VM
+*.dex# Java class files
+*.class# Generated files
+bin/
+gen/
+out/
+release/
+# External
+.externalNativeBuild
+.cxx/
+# Gradle
+.gradle/
+build/
+# Google Services
+google-services.json
+# IntelliJ
+*.iml
+.idea/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/caches
+.idea/modules.xml
+.idea/codeStyles/
+# Keystore
+*.jks
+*.keystore
+# Lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+lint/reports/
+# Log
+*.log
+# MacOS
+.DS_Store
+# Navigation
+.idea/navEditor.xml
+# Proguard
+proguard/
+# Version Control
+vcs.xml

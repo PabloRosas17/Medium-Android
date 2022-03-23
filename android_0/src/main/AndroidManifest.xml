@@ -1,0 +1,26 @@
+
+<manifest
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="coffee.flavors.android_0">
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/module_android0">
+        <dist:delivery>
+            <dist:on-demand />
+        </dist:delivery>
+        <dist:fusing dist:include="false" />
+    </dist:module>
+    <application
+        tools:ignore="AllowBackup,MissingApplicationIcon"
+        android:hardwareAccelerated="true">
+        <activity
+            android:name="coffee.flavors.android_0.views.screens.activities.TabsView"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.View" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

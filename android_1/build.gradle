@@ -1,0 +1,33 @@
+
+apply plugin: 'com.android.dynamic-feature'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    defaultConfig {
+        compileSdkVersion rootProject.compile_sdk_ver
+        minSdkVersion rootProject.min_sdk_ver
+        targetSdkVersion rootProject.target_sdk_ver
+        maxSdkVersion  rootProject.max_sdk_ver
+    }
+    dataBinding {
+        enabled = true
+    }
+    packagingOptions {
+        pickFirst "META-INF/DEPENDENCIES"
+    }
+}
+dependencies {
+    implementation project(path: ':common')
+    implementation project(':android_zzz')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Feel free to use this file in any way, shape, or form.
+  -->
+
+<!--
+  ~ Feel free to use this file in any way, shape, or form.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="mViewModel"
+            type="coffee.flavors.android_zzz.controllers.viewmodel.SelectionViewModel"/>
+        <variable
+            name="mPresenter"
+            type="coffee.flavors.android_zzz.views.presenters.activities.PresenterSelection"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zzz_select_android_0"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Select Android_0"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorDarkNight"
+            android:backgroundTint="@color/colorSecondary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="@{()->mPresenter.fireAndroid0()}"
+            android:elevation="7dp"
+            app:elevation="7dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zzz_select_android_1"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Select Android_1"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorGhostSmoke"
+            app:layout_constraintTop_toBottomOf="@+id/zzz_select_android_0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="@{()->mPresenter.fireAndroid1()}"
+            android:elevation="7dp"
+            app:elevation="7dp"/>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="?android:attr/progressBarStyleHorizontal" />
+        <TextView
+            android:id="@+id/progress_text"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Loading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="progress_bar,progress_text" />
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="zzz_select_android_1,zzz_select_android_0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="coffee.flavors.android_zzz">
+    <application
+        android:name="coffee.flavors.android_zzz.core.AndroidZZZ"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/DefaultTheme"
+        tools:replace="android:theme"
+        tools:ignore="AllowBackup"
+        android:hardwareAccelerated="true">
+        <activity
+            android:name="coffee.flavors.android_zzz.views.screens.activities.SelectionView"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

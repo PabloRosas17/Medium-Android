@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="mViewModel"
+            type="coffee.flavors.android_0.controllers.viewmodel.HorizontalTabsViewModel"/>
+        <variable
+            name="mPresenter"
+            type="coffee.flavors.android_0.views.presenters.fragments.HorizontalTabsPresenter"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_horizontal_tabs_view_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/hor_tl_btn"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:text="@string/horizontal_tab_layout_btn_msg"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSecondaryDark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="@{()->mPresenter.fireHorTlBtn()}"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_hor_tabs_view_50_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

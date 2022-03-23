@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="LightThemeBinding" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorLightPrimaryDark</item>
+        <item name="colorPrimary">@color/colorLightPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorLightPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorLightSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorLightSecondaryVariant</item>
+        <item name="background">@color/colorLightBackground</item>
+        <item name="colorSurface">@color/colorLightSurface</item>
+        <item name="colorError">@color/colorLightError</item>
+        <item name="colorOnPrimary">@color/colorLightOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorLightOnSecondary</item>
+        <item name="colorOnBackground">@color/colorLightOnBackground</item>
+        <item name="colorOnSurface">@color/colorLightOnSurface</item>
+        <item name="colorOnError">@color/colorLightOnError</item>
+    </style>
+    <style name="DarkThemeBinding" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorDarkPrimaryDark</item>
+        <item name="colorPrimary">@color/colorDarkPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorDarkPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorDarkSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorDarkSecondaryVariant</item>
+        <item name="background">@color/colorDarkBackground</item>
+        <item name="colorSurface">@color/colorDarkSurface</item>
+        <item name="colorError">@color/colorDarkError</item>
+        <item name="colorOnPrimary">@color/colorDarkOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorDarkOnSecondary</item>
+        <item name="colorOnBackground">@color/colorDarkOnBackground</item>
+        <item name="colorOnSurface">@color/colorDarkOnSurface</item>
+        <item name="colorOnError">@color/colorDarkOnError</item>
+    </style>
+    <style name="LightThemeDayNight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorLightPrimaryDark</item>
+        <item name="colorPrimary">@color/colorLightPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorLightPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorLightSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorLightSecondaryVariant</item>
+        <item name="background">@color/colorLightBackground</item>
+        <item name="colorSurface">@color/colorLightSurface</item>
+        <item name="colorError">@color/colorLightError</item>
+        <item name="colorOnPrimary">@color/colorLightOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorLightOnSecondary</item>
+        <item name="colorOnBackground">@color/colorLightOnBackground</item>
+        <item name="colorOnSurface">@color/colorLightOnSurface</item>
+        <item name="colorOnError">@color/colorLightOnError</item>
+    </style>
+    <style name="DarkThemeDayNight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorDarkPrimaryDark</item>
+        <item name="colorPrimary">@color/colorDarkPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorDarkPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorDarkSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorDarkSecondaryVariant</item>
+        <item name="background">@color/colorDarkBackground</item>
+        <item name="colorSurface">@color/colorDarkSurface</item>
+        <item name="colorError">@color/colorDarkError</item>
+        <item name="colorOnPrimary">@color/colorDarkOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorDarkOnSecondary</item>
+        <item name="colorOnBackground">@color/colorDarkOnBackground</item>
+        <item name="colorOnSurface">@color/colorDarkOnSurface</item>
+        <item name="colorOnError">@color/colorDarkOnError</item>
+    </style>
+    <style name="LightThemeForced" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:ignore="NewApi">false</item>
+        <item name="colorSecondary">@color/colorLightSecondary</item>
+        <item name="colorSurface">@color/colorLightSurface</item>
+    </style>
+    <style name="DarkThemeForced" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:ignore="NewApi">true</item>
+        <item name="colorSecondary">@color/colorDarkSecondary</item>
+        <item name="colorSurface">@color/colorDarkSurface</item>
+    </style>
+</resources>

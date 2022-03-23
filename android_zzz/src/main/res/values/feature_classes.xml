@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="class_android0">coffee.flavors.android_0.views.screens.activities.TabsView</string>
+    <string name="class_android1">coffee.flavors.android_1.views.screens.activities.ThemesView</string>
+</resources>

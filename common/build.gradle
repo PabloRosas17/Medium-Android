@@ -1,0 +1,28 @@
+
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    defaultConfig {
+        compileSdkVersion rootProject.compile_sdk_ver
+        minSdkVersion rootProject.min_sdk_ver
+        targetSdkVersion rootProject.target_sdk_ver
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:' + rootProject.junit_ver
+    testImplementation 'androidx.arch.core:core-testing:' + rootProject.arch_testing_core_ver
+    androidTestImplementation 'androidx.test.ext:junit:' + rootProject.ext_junit_ver
+    androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espresso_core_ver
+}

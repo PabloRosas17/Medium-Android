@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme Palette -->
+    <color name="colorLightAccent">#FFFFFF</color>
+    <color name="colorLightPrimaryDark">#bbbbbb</color>
+    <color name="colorLightSecondaryDark">#1c313a</color>
+    <color name="colorLightPrimary">#ededed</color>
+    <color name="colorLightPrimaryVariant">#dfdfdf</color>
+    <color name="colorLightSecondary">#455a64</color>
+    <color name="colorLightSecondaryVariant">#37474f</color>
+    <color name="colorLightBackground">#FFFFFF</color>
+    <color name="colorLightSurface">#121212</color>
+    <color name="colorLightError">#8B0000</color>
+    <color name="colorLightOnPrimary">#FFFFFF</color>
+    <color name="colorLightOnSecondary">#000000</color>
+    <color name="colorLightOnBackground">#000000</color>
+    <color name="colorLightOnSurface">#000000</color>
+    <color name="colorLightOnError">#FFFFFF</color>
+    <!-- Dark Theme Palette -->
+    <color name="colorDarkAccent">#121212</color>
+    <color name="colorDarkPrimaryDark">#121212</color>
+    <color name="colorDarkSecondaryDark">#000000</color>
+    <color name="colorDarkPrimary">#121212</color>
+    <color name="colorDarkPrimaryVariant">#121212</color>
+    <color name="colorDarkSecondary">#000000</color>
+    <color name="colorDarkSecondaryVariant">#000000</color>
+    <color name="colorDarkBackground">#121212</color>
+    <color name="colorDarkSurface">#FFFFFF</color>
+    <color name="colorDarkError">#CF6679</color>
+    <color name="colorDarkOnPrimary">#121212</color>
+    <color name="colorDarkOnSecondary">#000000</color>
+    <color name="colorDarkOnBackground">#FFFFFF</color>
+    <color name="colorDarkOnSurface">#FFFFFF</color>
+    <color name="colorDarkOnError">#000000</color>
+    <!-- Generic Palette -->
+    <color name="colorDark">#1E1E1E</color>
+    <color name="colorLight">#F0F0F0</color>
+</resources>

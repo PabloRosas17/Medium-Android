@@ -1,0 +1,28 @@
+
+<manifest
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="coffee.flavors.android_1">
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/module_android1">
+        <dist:delivery>
+            <dist:on-demand />
+        </dist:delivery>
+        <dist:fusing dist:include="false" />
+    </dist:module>
+    <application
+        android:theme="@style/LightThemeBinding"
+        tools:replace="android:theme"
+        tools:ignore="AllowBackup,MissingApplicationIcon"
+        android:hardwareAccelerated="true">
+        <activity
+            android:name="coffee.flavors.android_1.views.screens.activities.ThemesView"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.View" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

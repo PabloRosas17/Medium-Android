@@ -1,0 +1,6 @@
+
+rootProject.name='Medium-Android'
+include ':common'
+include ':android_zzz'
+include ':android_0'
+include ':android_1'
